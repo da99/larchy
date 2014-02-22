@@ -4,11 +4,11 @@
 #
 set -u -e -o pipefail
 
-if [[ -z "$(gem which thin)" ]]; then
+if [[ -z "$(gem which thin 2>/dev/null)" ]]; then
   gem install thin
 fi
 
-if [[ -z "$(gem which sinatra)" ]]; then
+if [[ -z "$(gem which sinatra 2>/dev/null)" ]]; then
   gem install sinatra
 fi
 
