@@ -14,5 +14,5 @@ How-to-use:
 
        git clone https://github.com/da99/larchy.git
        cd larchy
-       ln -s path/to/your/dir public/my\_dir
+       ln -s path/to/your/dir public/my_dir
        bin/start
