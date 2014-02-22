@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# -*- bash -*-
+#
+#
+set -u -e -o pipefail
+
+if [[ -z "$(gem which thin)" ]]; then
+  gem install thin
+fi
+
+if [[ -z "$(gem which sinatra)" ]]; then
+  gem install sinatra
+fi
+
+RACK_ENV=production PORT=5555 ruby app.rb
+
+
+
